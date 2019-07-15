@@ -1,0 +1,2 @@
+# ThothCore
+Thoth core methods
