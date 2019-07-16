@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAi1rUoh2mmk6txlX7zczLWQAAAAACAAAAAAAQZgAAAAEAACAAAAD05XTvluedeV/nD2D7DsH90YXm4KTO848E1Gmu7RMhIgAAAAAOgAAAAAIAACAAAAAeaeDBHJhgpafJH2osSQvmVl4SQTw4DbjY27SfzQh+DCAAAADgRDRHuFscuF5w0d0a8Xy0hjMjg8rPEpBkkVZLYJjye0AAAACxadD/Xok64yc0dZcW1JGw6d0WrSwXswaLwzrVNaONRnlUVC58bhKyo+1tRhV8prLnmjF+WuoL9vGLM37nNPRc</EncryptedPassword>
+    <_PublishTargetUrl>ftp://188.42.151.10/thothCore</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app.config">
+      <publishTime>07/16/2019 15:02:24</publishTime>
+    </File>
+    <File Include="appsettings.Development.json">
+      <publishTime>07/16/2019 15:02:24</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>07/16/2019 15:02:24</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Antiforgery.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.Core.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authorization.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authorization.Policy.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Connections.Abstractions.dll">
+      <publishTime>07/26/2018 18:17:04</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cors.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.Internal.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.DataProtection.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.DataProtection.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Diagnostics.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:12</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Diagnostics.dll">
+      <publishTime>06/12/2019 16:53:12</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.dll">
+      <publishTime>12/06/2018 23:21:56</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.HostFiltering.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Hosting.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Hosting.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Hosting.Server.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Html.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Http.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Http.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Http.Extensions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Http.Features.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.HttpOverrides.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.HttpsPolicy.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.JsonPatch.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Localization.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Abstractions.dll">
+      <publishTime>09/20/2018 15:08:28</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.ApiExplorer.dll">
+      <publishTime>09/20/2018 15:08:26</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Core.dll">
+      <publishTime>09/20/2018 15:08:26</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Cors.dll">
+      <publishTime>09/20/2018 15:08:22</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.DataAnnotations.dll">
+      <publishTime>09/20/2018 15:08:30</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.dll">
+      <publishTime>09/20/2018 15:08:28</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Formatters.Json.dll">
+      <publishTime>09/20/2018 15:08:30</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Localization.dll">
+      <publishTime>09/20/2018 15:08:22</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Razor.dll">
+      <publishTime>09/20/2018 15:08:28</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Razor.Extensions.dll">
+      <publishTime>06/12/2019 16:53:13</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.RazorPages.dll">
+      <publishTime>09/20/2018 15:08:24</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.TagHelpers.dll">
+      <publishTime>09/20/2018 15:08:22</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.ViewFeatures.dll">
+      <publishTime>09/20/2018 15:08:22</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Razor.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Razor.Language.dll">
+      <publishTime>06/12/2019 16:53:12</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Razor.Runtime.dll">
+      <publishTime>06/12/2019 16:53:12</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.ResponseCaching.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:12</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Routing.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Routing.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.IISIntegration.dll">
+      <publishTime>12/06/2018 23:21:38</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
+      <publishTime>07/26/2018 18:17:06</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.Kestrel.dll">
+      <publishTime>07/26/2018 18:17:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.Kestrel.Https.dll">
+      <publishTime>07/26/2018 18:17:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll">
+      <publishTime>07/26/2018 18:17:06</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll">
+      <publishTime>07/26/2018 18:17:06</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.WebUtilities.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Razor.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.DotNet.PlatformAbstractions.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Binder.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.CommandLine.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.EnvironmentVariables.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.FileExtensions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Json.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.UserSecrets.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyModel.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Composite.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Physical.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileSystemGlobbing.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Hosting.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Localization.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Localization.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Configuration.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Console.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Debug.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.ObjectPool.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.ConfigurationExtensions.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.WebEncoders.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="Microsoft.Net.Http.Headers.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.Registry.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="netstandard.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.Bson.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="System.AppContext.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Buffers.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="System.Collections.Concurrent.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Collections.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Collections.Immutable.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="System.Collections.NonGeneric.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Collections.Specialized.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.ComponentModel.Annotations.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="System.ComponentModel.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.ComponentModel.EventBasedAsync.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.ComponentModel.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.ComponentModel.TypeConverter.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Console.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Data.Common.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.Contracts.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.Debug.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>09/18/2018 19:38:16</publishTime>
+    </File>
+    <File Include="System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.Process.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.StackTrace.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.TextWriterTraceListener.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.Tools.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.TraceSource.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Diagnostics.Tracing.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Drawing.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Dynamic.Runtime.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Globalization.Calendars.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Globalization.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Globalization.Extensions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.Compression.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.Compression.ZipFile.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.FileSystem.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.FileSystem.Watcher.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.IsolatedStorage.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.MemoryMappedFiles.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.Pipelines.dll">
+      <publishTime>11/29/2018 15:39:14</publishTime>
+    </File>
+    <File Include="System.IO.Pipes.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.IO.UnmanagedMemoryStream.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Linq.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Linq.Expressions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Linq.Parallel.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Linq.Queryable.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Memory.dll">
+      <publishTime>11/29/2018 15:39:16</publishTime>
+    </File>
+    <File Include="System.Net.Http.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.NameResolution.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.NetworkInformation.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.Ping.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.Requests.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.Security.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.Sockets.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.WebHeaderCollection.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.WebSockets.Client.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Net.WebSockets.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Numerics.Vectors.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="System.ObjectModel.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Reflection.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Reflection.Extensions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Reflection.Metadata.dll">
+      <publishTime>06/12/2019 16:53:11</publishTime>
+    </File>
+    <File Include="System.Reflection.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Resources.Reader.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Resources.ResourceManager.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Resources.Writer.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>09/18/2018 19:38:10</publishTime>
+    </File>
+    <File Include="System.Runtime.CompilerServices.VisualC.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Extensions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Handles.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.InteropServices.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Numerics.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Serialization.Formatters.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Serialization.Json.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Serialization.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Runtime.Serialization.Xml.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.AccessControl.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="System.Security.Claims.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Algorithms.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Cng.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Csp.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Encoding.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Primitives.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.Xml.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>06/12/2019 16:53:10</publishTime>
+    </File>
+    <File Include="System.Security.Principal.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Security.Principal.Windows.dll">
+      <publishTime>09/18/2018 19:38:10</publishTime>
+    </File>
+    <File Include="System.Security.SecureString.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Text.Encoding.CodePages.dll">
+      <publishTime>06/12/2019 16:53:08</publishTime>
+    </File>
+    <File Include="System.Text.Encoding.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Text.Encoding.Extensions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Text.Encodings.Web.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="System.Text.RegularExpressions.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.Overlapped.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.Tasks.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.Tasks.Extensions.dll">
+      <publishTime>06/12/2019 16:53:09</publishTime>
+    </File>
+    <File Include="System.Threading.Tasks.Parallel.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.Thread.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.ThreadPool.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Threading.Timer.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.ValueTuple.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.ReaderWriter.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.XDocument.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.XmlDocument.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.XmlSerializer.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.XPath.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="System.Xml.XPath.XDocument.dll">
+      <publishTime>06/12/2019 16:44:21</publishTime>
+    </File>
+    <File Include="ThothCore.deps.json">
+      <publishTime>07/16/2019 15:16:10</publishTime>
+    </File>
+    <File Include="ThothCore.exe">
+      <publishTime>07/16/2019 15:16:10</publishTime>
+    </File>
+    <File Include="ThothCore.exe.config">
+      <publishTime>07/16/2019 15:11:40</publishTime>
+    </File>
+    <File Include="ThothCore.pdb">
+      <publishTime>07/16/2019 15:16:10</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>07/16/2019 15:16:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
