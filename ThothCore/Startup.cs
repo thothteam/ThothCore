@@ -36,8 +36,8 @@ namespace ThothCore
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            const string jwtShemeName = "JwtBeare";
-            var signingDecodingkey = (IJwtSigningDecodingKey)signingKey;
+            const string jwtShemeName = "JwtBearer";
+            var signingDecodingKey = (IJwtSigningDecodingKey)signingKey;
 
             services.AddAuthentication(options =>
             {
@@ -47,6 +47,8 @@ namespace ThothCore
                 jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = signingDecodingKey.GetKey(),
+                    ValidateIssuer = true,
                     ValidIssuer = "ThothCore",
                     ValidateAudience = true,
                     ValidAudience = "ThothCoreClient",
@@ -67,6 +69,13 @@ namespace ThothCore
             {
                 app.UseHsts();
             }
+            var jwtBearerOptions = new JwtBearerOptions()
+            {
+                Authority = Configuration["Authentication:IdentityServer:Server"],
+                Audience = Configuration["Authentication:IdentityServer:Server"] + "/resources",
+                RequireHttpsMetadata = false,
+
+            };
 
             app.UseAuthentication();
             app.UseHttpsRedirection();

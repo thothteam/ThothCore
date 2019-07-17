@@ -14,9 +14,10 @@ namespace ThothCore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthentificationController : ControllerBase
+    public class AuthenticationController : ControllerBase
     {
         [AllowAnonymous]
+        [HttpPost]
         public ActionResult<string> Post(AuthenticationRequest authRequest, [FromServices] IJwtSigningEncodingKey signingEncodingKey)
         {
             //Проверка данных пользователя 
