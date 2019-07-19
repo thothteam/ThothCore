@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using ThothCore.Models;
 using Microsoft.AspNetCore.Authorization;
 
 namespace ThothCore.Controllers
@@ -21,7 +20,8 @@ namespace ThothCore.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             var nameIdentifier = this.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
-            return new string[] { nameIdentifier?.Value, "value1", "value2" };
+            var user = HttpContext.User.Identity.Name;
+            return new string[] { nameIdentifier?.Value, "value1", "value2", user };
         }
 
         // GET api/values/5
@@ -47,6 +47,20 @@ namespace ThothCore.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [Authorize]
+        [Route("getlogin")]
+        public IActionResult GetLogin()
+        {
+            return Ok($"Ваш логин: {User.Identity.Name}");
+        }
+
+        [Authorize(Roles = "admin")]
+        [Route("getrole")]
+        public IActionResult GetRole()
+        {
+            return Ok("Ваша роль: администратор");
         }
     }
 }

@@ -667,3 +667,7 @@ D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.Extensions.Identity.C
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.IdentityModel.Protocols.dll
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\projects\ThothCore\ThothCore\bin\Debug\net461\EntityFramework.SqlServer.dll
+D:\projects\ThothCore\ThothCore\bin\Debug\net461\EntityFramework.dll
+D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\projects\ThothCore\ThothCore\bin\Debug\net461\Microsoft.Extensions.Identity.Stores.dll

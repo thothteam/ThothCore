@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using ThothCore.Domain.Models;
 
 namespace ThothCore
 {
@@ -56,6 +58,25 @@ namespace ThothCore
                     ClockSkew = TimeSpan.FromSeconds(5)
                 };
             });
+
+            services.AddAuthorization(options =>
+            {
+                var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
+                    jwtShemeName,
+                    jwtShemeName);
+                defaultAuthorizationPolicyBuilder =
+                    defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser();
+                options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
+            });
+
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,17 +90,19 @@ namespace ThothCore
             {
                 app.UseHsts();
             }
-            var jwtBearerOptions = new JwtBearerOptions()
-            {
-                Authority = Configuration["Authentication:IdentityServer:Server"],
-                Audience = Configuration["Authentication:IdentityServer:Server"] + "/resources",
-                RequireHttpsMetadata = false,
-
-            };
 
             app.UseAuthentication();
+
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
