@@ -17,6 +17,10 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using ThothCore.Domain.Models;
+using ThothCore.Domain.Persistence.Contexts;
+using ThothCore.Domain.Persistence.Repositories;
+using ThothCore.Domain.Repositories;
+using ThothCore.Domain.Services;
 
 namespace ThothCore
 {
@@ -38,6 +42,7 @@ namespace ThothCore
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            #region auth
             const string jwtShemeName = "JwtBearer";
             var signingDecodingKey = (IJwtSigningDecodingKey)signingKey;
 
@@ -69,6 +74,8 @@ namespace ThothCore
                 options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
             });
 
+            #endregion
+
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -77,6 +84,8 @@ namespace ThothCore
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped<ICoursesService, CoursesService>();
+            services.AddScoped<ICoursesRepository, CoursesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -97,12 +106,27 @@ namespace ThothCore
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
+            UpdateDatabase<ApplicationDbContext>(app);
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private static void UpdateDatabase<T>(IApplicationBuilder app) where T:DbContext
+        {
+            using (var serviceScope = app.ApplicationServices
+                                          .GetRequiredService<IServiceScopeFactory>()
+                                          .CreateScope())
+            {
+                using (var context = serviceScope.ServiceProvider.GetService <T>())
+                {
+                    context.Database.Migrate();
+                }
+            }
         }
     }
 }
