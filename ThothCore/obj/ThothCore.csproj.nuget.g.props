@@ -17,11 +17,15 @@
     <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.design\2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.design\2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.razor.design\2.1.1\build\netstandard2.0\Microsoft.AspNetCore.Razor.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.razor.design\2.1.1\build\netstandard2.0\Microsoft.AspNetCore.Razor.Design.props')" />
     <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razor.extensions\2.1.1\build\netstandard2.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razor.extensions\2.1.1\build\netstandard2.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.props')" />
+    <Import Project="$(NuGetPackageRoot)javascriptengineswitcher.v8.native.win-x64\3.1.0\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('$(NuGetPackageRoot)javascriptengineswitcher.v8.native.win-x64\3.1.0\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
+    <Import Project="$(NuGetPackageRoot)javascriptengineswitcher.chakracore.native.win-x64\3.1.3\build\JavaScriptEngineSwitcher.ChakraCore.Native.win-x64.props" Condition="Exists('$(NuGetPackageRoot)javascriptengineswitcher.chakracore.native.win-x64\3.1.3\build\JavaScriptEngineSwitcher.ChakraCore.Native.win-x64.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.codeanalysis.analyzers\1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.tools\2.1.1</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_AspNetCore_Razor_Design Condition=" '$(PkgMicrosoft_AspNetCore_Razor_Design)' == '' ">C:\Users\notfo\.nuget\packages\microsoft.aspnetcore.razor.design\2.1.1</PkgMicrosoft_AspNetCore_Razor_Design>
+    <PkgJavaScriptEngineSwitcher_V8_Native_win-x64 Condition=" '$(PkgJavaScriptEngineSwitcher_V8_Native_win-x64)' == '' ">C:\Users\notfo\.nuget\packages\javascriptengineswitcher.v8.native.win-x64\3.1.0</PkgJavaScriptEngineSwitcher_V8_Native_win-x64>
+    <PkgJavaScriptEngineSwitcher_ChakraCore_Native_win-x64 Condition=" '$(PkgJavaScriptEngineSwitcher_ChakraCore_Native_win-x64)' == '' ">C:\Users\notfo\.nuget\packages\javascriptengineswitcher.chakracore.native.win-x64\3.1.3</PkgJavaScriptEngineSwitcher_ChakraCore_Native_win-x64>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\notfo\.nuget\packages\entityframework\6.2.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>

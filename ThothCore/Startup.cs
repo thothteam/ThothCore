@@ -15,12 +15,20 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using React.AspNet;
 using ThothCore.Domain.Models;
 using ThothCore.Domain.Persistence.Contexts;
 using ThothCore.Domain.Persistence.Repositories;
 using ThothCore.Domain.Repositories;
 using ThothCore.Domain.Services;
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using JavaScriptEngineSwitcher.V8;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
 
 namespace ThothCore
 {
@@ -39,6 +47,14 @@ namespace ThothCore
             const string singingSecurityKey = "0d5b3235a8b403c3dab9c3f4f65c07fcalskd234n1k41230";
             var signingKey = new SigningSymmetricKey(singingSecurityKey);
             services.AddSingleton<IJwtSigningEncodingKey>(signingKey);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+
+            // Make sure a JS engine is registered, or you will get an error!
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+                .AddChakraCore().AddV8();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -86,6 +102,7 @@ namespace ThothCore
 
             services.AddScoped<ICoursesService, CoursesService>();
             services.AddScoped<ICoursesRepository, CoursesRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -100,11 +117,40 @@ namespace ThothCore
                 app.UseHsts();
             }
 
+            // Initialise ReactJS.NET. Must be before static files.
+            app.UseReact(config =>
+            {
+
+                config
+                    .AddScript("~/js/login.jsx")
+                    .SetJsonSerializerSettings(new JsonSerializerSettings
+                    {
+                        StringEscapeHandling = StringEscapeHandling.EscapeHtml,
+                        ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    });
+                // If you want to use server-side rendering of React components,
+                // add all the necessary JavaScript files here. This includes
+                // your components as well as all of their dependencies.
+                // See http://reactjs.net/ for more information. Example:
+                //config
+                //  .AddScript("~/js/First.jsx")
+                //  .AddScript("~/js/Second.jsx");
+
+                // If you use an external build too (for example, Babel, Webpack,
+                // Browserify or Gulp), you can improve performance by disabling
+                // ReactJS.NET's version of Babel and loading the pre-transpiled
+                // scripts. Example:
+                //config
+                //  .SetLoadBabel(false)
+                //  .AddScriptWithoutTransform("~/js/bundle.server.js");
+            });
+
+            app.UseStaticFiles();
+
             app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseDefaultFiles();
-            app.UseStaticFiles();
 
             UpdateDatabase<ApplicationDbContext>(app);
 
@@ -114,6 +160,7 @@ namespace ThothCore
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
         }
 
         private static void UpdateDatabase<T>(IApplicationBuilder app) where T:DbContext
