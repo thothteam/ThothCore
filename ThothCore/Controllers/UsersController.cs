@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using ThothCore.Domain.ViewModels;
 
 namespace ThothCore.Controllers
 {
+	[EnableCors("_allowAllOrigins")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -51,7 +53,7 @@ namespace ThothCore.Controllers
 
                 if (result.Succeeded)
                 {
-                    return Ok();
+                    return new JsonResult(result.Succeeded);
                 }
                 else
                 {

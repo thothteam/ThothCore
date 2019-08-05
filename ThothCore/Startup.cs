@@ -28,6 +28,7 @@ using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
 using JavaScriptEngineSwitcher.V8;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using ThothCore.Domain.Middleware;
 
 
 namespace ThothCore
@@ -39,7 +40,9 @@ namespace ThothCore
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        readonly string AllowAllOrigins = "_allowAllOrigins";
+		readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+		public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -90,10 +93,31 @@ namespace ThothCore
                 options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
             });
 
-            #endregion
+			#endregion
 
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+			services.AddCors(options =>
+			{
+				options.AddPolicy(MyAllowSpecificOrigins,
+					builder =>
+					{
+						builder.WithOrigins("https://localhost:44353")
+							.AllowAnyMethod()
+							.AllowAnyHeader()
+							.AllowCredentials();
+					});
+				options.AddPolicy(AllowAllOrigins,
+					builder =>
+					{
+						builder
+							.AllowAnyOrigin()
+							.AllowAnyMethod()
+							.AllowAnyHeader()
+							.AllowCredentials();
+					});
+			});
+
+			services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -147,9 +171,13 @@ namespace ThothCore
 
             app.UseStaticFiles();
 
-            app.UseAuthentication();
+            app.UseMiddleware<JWTInHeaderMiddleware>();
 
-            app.UseHttpsRedirection();
+			app.UseAuthentication();
+
+            app.UseCors(MyAllowSpecificOrigins);
+
+			app.UseHttpsRedirection();
             app.UseDefaultFiles();
 
             UpdateDatabase<ApplicationDbContext>(app);

@@ -2,7 +2,7 @@
 $('#submitLogin').click(function (e) {
 	e.preventDefault();
 	var authRequest = {
-		Name: $('#emailLogin').val(),
+		Email: $('#emailLogin').val(),
 		Password: $('#passwordLogin').val()
 	};
 

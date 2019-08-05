@@ -59,7 +59,7 @@ using React.AspNet;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 147, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "66571ec2c3a14ab185d3e8d9f51aba7a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aede323c85c040c7a1e7a7900c6f7de0", async() => {
                 BeginContext(33, 110, true);
                 WriteLiteral("\r\n\t<meta charset=\"utf-8\" />\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\t<title>");
                 EndContext();
@@ -89,7 +89,7 @@ using React.AspNet;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(176, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2699f19f14f4c99b31e4daf95fe8d9a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d87e46a7723411c82f2eb2d56b88826", async() => {
                 BeginContext(182, 10, true);
                 WriteLiteral("\r\n<div>\r\n\t");
                 EndContext();
