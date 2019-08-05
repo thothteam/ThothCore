@@ -41,4 +41,8 @@
     <Reference Include="System.IdentityModel" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\cpanel\" />
+  </ItemGroup>
+
 </Project>

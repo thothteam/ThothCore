@@ -699,3 +699,5 @@ D:\projects\ThothCore\ThothCore\obj\Debug\net461\Razor\Views\_ViewStart.g.cshtml
 D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.RazorTargetAssemblyInfo.cs
 D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.Views.pdb
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\x64\ChakraCore.dll
+D:\projects\ThothCore\ThothCore\obj\Debug\net461\Razor\Views\Home\Index.g.cshtml.cs
+D:\projects\ThothCore\ThothCore\obj\Debug\net461\Razor\Views\Shared\Error.g.cshtml.cs

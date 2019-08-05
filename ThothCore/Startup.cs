@@ -47,22 +47,15 @@ namespace ThothCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            const string singingSecurityKey = "0d5b3235a8b403c3dab9c3f4f65c07fcalskd234n1k41230";
-            var signingKey = new SigningSymmetricKey(singingSecurityKey);
-            services.AddSingleton<IJwtSigningEncodingKey>(signingKey);
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddReact();
-
-            // Make sure a JS engine is registered, or you will get an error!
-            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
-                .AddChakraCore().AddV8();
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            #region auth
-            const string jwtShemeName = "JwtBearer";
+			#region auth
+			const string singingSecurityKey = "0d5b3235a8b403c3dab9c3f4f65c07fcalskd234n1k41230";
+			var signingKey = new SigningSymmetricKey(singingSecurityKey);
+			services.AddSingleton<IJwtSigningEncodingKey>(signingKey);
+
+			const string jwtShemeName = "JwtBearer";
             var signingDecodingKey = (IJwtSigningDecodingKey)signingKey;
 
             services.AddAuthentication(options =>
@@ -95,6 +88,7 @@ namespace ThothCore
 
 			#endregion
 
+			#region cors
 
 			services.AddCors(options =>
 			{
@@ -117,17 +111,22 @@ namespace ThothCore
 					});
 			});
 
+			#endregion
+
+			#region database
+
 			services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+			services.AddIdentity<ApplicationUser, IdentityRole>()
+				.AddEntityFrameworkStores<ApplicationDbContext>()
+				.AddDefaultTokenProviders();
 
-            services.AddScoped<ICoursesService, CoursesService>();
-            services.AddScoped<ICoursesRepository, CoursesRepository>();
+			services.AddScoped<ICoursesService, CoursesService>();
+			services.AddScoped<ICoursesRepository, CoursesRepository>();
 
-        }
+			#endregion
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -138,38 +137,11 @@ namespace ThothCore
             }
             else
             {
-                app.UseHsts();
+	            app.UseExceptionHandler("/Home/Error");
+				app.UseHsts();
             }
-
-            // Initialise ReactJS.NET. Must be before static files.
-            app.UseReact(config =>
-            {
-
-                config
-                    .AddScript("~/js/login.jsx")
-                    .SetJsonSerializerSettings(new JsonSerializerSettings
-                    {
-                        StringEscapeHandling = StringEscapeHandling.EscapeHtml,
-                        ContractResolver = new CamelCasePropertyNamesContractResolver()
-                    });
-                // If you want to use server-side rendering of React components,
-                // add all the necessary JavaScript files here. This includes
-                // your components as well as all of their dependencies.
-                // See http://reactjs.net/ for more information. Example:
-                //config
-                //  .AddScript("~/js/First.jsx")
-                //  .AddScript("~/js/Second.jsx");
-
-                // If you use an external build too (for example, Babel, Webpack,
-                // Browserify or Gulp), you can improve performance by disabling
-                // ReactJS.NET's version of Babel and loading the pre-transpiled
-                // scripts. Example:
-                //config
-                //  .SetLoadBabel(false)
-                //  .AddScriptWithoutTransform("~/js/bundle.server.js");
-            });
-
-            app.UseStaticFiles();
+			//app.UseDefaultFiles(); эта хренотень нужна только для обслуживания файла по умолчанию если нет home/index
+			app.UseStaticFiles();
 
             app.UseMiddleware<JWTInHeaderMiddleware>();
 
@@ -178,18 +150,17 @@ namespace ThothCore
             app.UseCors(MyAllowSpecificOrigins);
 
 			app.UseHttpsRedirection();
-            app.UseDefaultFiles();
 
             UpdateDatabase<ApplicationDbContext>(app);
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+	            routes.MapRoute(
+		            name: "default",
+		            template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-        }
+		}
 
         private static void UpdateDatabase<T>(IApplicationBuilder app) where T:DbContext
         {

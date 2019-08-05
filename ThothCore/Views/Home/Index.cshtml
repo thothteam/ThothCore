@@ -1,0 +1,66 @@
+﻿
+@{
+	ViewData["Title"] = "THOTH - EDUCATION SYSTEM";
+}
+
+<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+		background: #181520;
+	}
+
+	.full-height {
+		height: 100vh;
+		background: #181520;
+	}
+
+	.center {
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+	}
+	.thoth {
+		width: 300px;
+		height: 400px;
+		height: 100vh;
+
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+		flex-direction: column;
+
+	}
+	.main-header {
+
+		display: block;
+		color: white;
+		font-size: 2rem;
+	}
+	.sub-header {
+		display: block;
+		color: ghostwhite;
+		font-size: 1rem;
+	}
+	.thoth-img {
+		height: 65%
+	}
+
+</style>
+
+<iframe src="~/audio/250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+<div class="full-height center">
+	<div class="thoth">
+		<div class="main-header" >THOTH 
+		</div>
+		<div class="sub-header" >EDUCATION SYSTEM
+		</div>
+		<img src="~/img/thoth.jpg" class="thoth-img" alt="thoth" />
+		<audio autoplay id="playAudio">
+			<source src="~/audio/gladiator_02%20-%20The%20Wheat.mp3" type="audio/mpeg"/>
+		</audio>
+	</div>
+
+</div>
+
