@@ -122,7 +122,7 @@ using React.AspNet;
 ");
             EndContext();
             BeginContext(762, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("iframe", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1cae3b79579482b8b7121f40c728195", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("iframe", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "402e30c7fbce41b1a420ccc6b0463565", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -143,7 +143,7 @@ using React.AspNet;
             WriteLiteral("\r\n\r\n<div class=\"full-height center\">\r\n\t<div class=\"thoth\">\r\n\t\t<div class=\"main-header\" >THOTH \r\n\t\t</div>\r\n\t\t<div class=\"sub-header\" >EDUCATION SYSTEM\r\n\t\t</div>\r\n\t\t");
             EndContext();
             BeginContext(1037, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ef536f7e8ac54bd8a7ed0ea5ac0badd0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e401978a74734d39a623945f597ed3da", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -163,7 +163,7 @@ using React.AspNet;
             WriteLiteral("\r\n\t\t<audio autoplay id=\"playAudio\">\r\n\t\t\t");
             EndContext();
             BeginContext(1136, 76, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "143bc69561494c468374948a6d894b5d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "707c31dc82764d4e8d97e74025c26602", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
