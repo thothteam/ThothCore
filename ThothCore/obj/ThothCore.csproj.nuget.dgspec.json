@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nezo\\source\\ThothCore\\ThothCore\\ThothCore.csproj": {}
+    "D:\\projects\\ThothCore\\ThothCore\\ThothCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nezo\\source\\ThothCore\\ThothCore\\ThothCore.csproj": {
+    "D:\\projects\\ThothCore\\ThothCore\\ThothCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nezo\\source\\ThothCore\\ThothCore\\ThothCore.csproj",
+        "projectUniqueName": "D:\\projects\\ThothCore\\ThothCore\\ThothCore.csproj",
         "projectName": "ThothCore",
-        "projectPath": "C:\\Users\\nezo\\source\\ThothCore\\ThothCore\\ThothCore.csproj",
-        "packagesPath": "C:\\Users\\nezo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nezo\\source\\ThothCore\\ThothCore\\obj\\",
+        "projectPath": "D:\\projects\\ThothCore\\ThothCore\\ThothCore.csproj",
+        "packagesPath": "C:\\Users\\notfo\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\ThothCore\\ThothCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\nezo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\notfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net461"

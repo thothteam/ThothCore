@@ -617,7 +617,6 @@ D:\projects\ThothCore\ThothCore\bin\Debug\net461\System.Xml.XmlDocument.dll
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\System.Xml.XmlSerializer.dll
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\System.Xml.XPath.dll
 D:\projects\ThothCore\ThothCore\bin\Debug\net461\System.Xml.XPath.XDocument.dll
-D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.csprojAssemblyReference.cache
 D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.exe.config
 D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.csproj.CoreCompileInputs.cache
 D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.RazorAssemblyInfo.cache
@@ -1090,3 +1089,5 @@ C:\Users\nezo\source\ThothCore\ThothCore\obj\Debug\net461\ThothCore.csproj.CopyC
 C:\Users\nezo\source\ThothCore\ThothCore\obj\Debug\net461\ThothCore.exe
 C:\Users\nezo\source\ThothCore\ThothCore\obj\Debug\net461\ThothCore.pdb
 C:\Users\nezo\source\ThothCore\ThothCore\obj\Debug\net461\Razor\Views\Cpanel\Index.g.cshtml.cs
+D:\projects\ThothCore\ThothCore\obj\Debug\net461\Razor\Views\Cpanel\Index.g.cshtml.cs
+D:\projects\ThothCore\ThothCore\obj\Debug\net461\ThothCore.csprojAssemblyReference.cache
