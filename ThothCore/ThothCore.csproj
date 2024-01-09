@@ -30,11 +30,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.5.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.7.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
     <PackageReference Include="React.AspNet" Version="5.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.7.0" />
   </ItemGroup>
 
   <ItemGroup>
